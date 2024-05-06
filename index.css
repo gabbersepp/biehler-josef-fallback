@@ -6,7 +6,8 @@
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
-  position: fixed;
+  z-index: 1;
+  position: absolute;
   top: 0;
   right: 0;
 }
@@ -108,6 +109,48 @@
   clear: both;
 }
 
+.save-the-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  max-height: 100%;
+  width: 20%;
+  padding: 0.5rem;
+  background-color: white;
+}
+.save-the-date h2 {
+  color: #6a89cc;
+  text-align: center;
+  font-size: 1rem;
+}
+.save-the-date .sessions .session ~ .session {
+  margin-top: 20px;
+}
+.save-the-date .sessions .session .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 0.5rem;
+}
+.save-the-date .sessions .session .title span {
+  color: #cc6a78;
+}
+.save-the-date .sessions .session .description {
+  margin-left: 1rem;
+  padding-left: 5px;
+  border-left: 1px solid #6a89cc;
+  font-size: 0.75rem;
+}
+.save-the-date .sessions .session .link {
+  font-size: 0.75rem;
+  color: #6a89cc;
+  text-align: center;
+}
+.save-the-date .sessions .session .link a:visited, .save-the-date .sessions .session .link a {
+  color: #6a89cc;
+}
+
 .content .cloud {
   float: left;
   width: 50%;
@@ -124,7 +167,7 @@
 }
 
 #cloud {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -571,6 +614,7 @@
 }
 .speaker {
   background-color: white;
+  padding-bottom: 2rem;
 }
 .speaker h1 {
   text-align: center;
@@ -660,8 +704,8 @@ html, body {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  height: 100%;
   background-color: white;
+  padding-bottom: 2rem;
 }
 
 footer {
